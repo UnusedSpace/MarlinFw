@@ -426,7 +426,11 @@
 
 // Show Temperature ADC value
 // Enable for M105 to include ADC values read from temperature sensors.
+<<<<<<< HEAD
 #define SHOW_TEMP_ADC_VALUES                                                                       // Änderung
+=======
+//#define SHOW_TEMP_ADC_VALUES
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
 /**
  * High Temperature Thermistor Support
@@ -446,14 +450,22 @@
 
 // The number of consecutive low temperature errors that can occur
 // before a min_temp_error is triggered. (Shouldn't be more than 10.)
+<<<<<<< HEAD
 #define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 10                                           // Änderung
+=======
+//#define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 0
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
 // The number of milliseconds a hotend will preheat before starting to check
 // the temperature. This value should NOT be set to the time it takes the
 // hot end to reach the target temperature, but the time it takes to reach
 // the minimum temperature your thermistor can read. The lower the better/safer.
 // This shouldn't need to be more than 30 seconds (30000)
+<<<<<<< HEAD
 #define MILLISECONDS_PREHEAT_TIME 30000                                                            // Änderung
+=======
+//#define MILLISECONDS_PREHEAT_TIME 0
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
 // @section extruder
 
@@ -671,7 +683,11 @@
 
 //#define X_DUAL_STEPPER_DRIVERS
 #if ENABLED(X_DUAL_STEPPER_DRIVERS)
+<<<<<<< HEAD
   #define INVERT_X2_VS_X_DIR    // Enable if X2 direction signal is opposite to X                  // Änderung
+=======
+  //#define INVERT_X2_VS_X_DIR    // Enable if X2 direction signal is opposite to X
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   //#define X_DUAL_ENDSTOPS
   #if ENABLED(X_DUAL_ENDSTOPS)
     #define X2_USE_ENDSTOP _XMAX_
@@ -842,7 +858,11 @@
    * differs, a mode set eeprom write will be completed at initialization.
    * Use the option below to force an eeprom write to a V3.1 probe regardless.
    */
+<<<<<<< HEAD
   #define BLTOUCH_SET_5V_MODE                                                                      // Änderung
+=======
+  //#define BLTOUCH_SET_5V_MODE
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
   /**
    * Safety: Activate if connecting a probe with an unknown voltage mode.
@@ -876,7 +896,11 @@
   // Define probe X and Y positions for Z1, Z2 [, Z3 [, Z4]]
   // If not defined, probe limits will be used.
   // Override with 'M422 S<index> X<pos> Y<pos>'
+<<<<<<< HEAD
   #define Z_STEPPER_ALIGN_XY { {  10, 180 }, { 300,  180 }, { 290, 290 } }                         // Änderung
+=======
+  //#define Z_STEPPER_ALIGN_XY { {  10, 190 }, { 100,  10 }, { 190, 190 } }
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
   /**
    * Orientation for the automatically-calculated probe positions.
@@ -917,7 +941,11 @@
 
   // On a 300mm bed a 5% grade would give a misalignment of ~1.5cm
   #define G34_MAX_GRADE              5    // (%) Maximum incline that G34 will handle
+<<<<<<< HEAD
   #define Z_STEPPER_ALIGN_ITERATIONS 3    // Number of iterations to apply during alignment        // Änderung
+=======
+  #define Z_STEPPER_ALIGN_ITERATIONS 5    // Number of iterations to apply during alignment
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   #define Z_STEPPER_ALIGN_ACC        0.02 // Stop iterating early if the accuracy is better than this
   #define RESTORE_LEVELING_AFTER_G34      // Restore leveling after G34 is done?
   // After G34, re-home Z (G28 Z) or just calculate it from the last probe heights?
@@ -1009,7 +1037,11 @@
  */
 //#define XY_FREQUENCY_LIMIT      10 // (Hz) Maximum frequency of small zigzag infill moves. Set with M201 F<hertz>.
 #ifdef XY_FREQUENCY_LIMIT
+<<<<<<< HEAD
   #define XY_FREQUENCY_MIN_PERCENT 15 // (percent) Minimum FR percentage to apply. Set with M201 G<min%>.  // Änderung
+=======
+  #define XY_FREQUENCY_MIN_PERCENT 5 // (percent) Minimum FR percentage to apply. Set with M201 G<min%>.
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 #endif
 
 // Minimum planner junction speed. Sets the default minimum speed the planner plans for at the end
@@ -1021,7 +1053,11 @@
 // Backlash Compensation
 // Adds extra movement to axes on direction-changes to account for backlash.
 //
+<<<<<<< HEAD
 #define BACKLASH_COMPENSATION                                                                      // Änderung
+=======
+//#define BACKLASH_COMPENSATION
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 #if ENABLED(BACKLASH_COMPENSATION)
   // Define values for backlash distance and correction.
   // If BACKLASH_GCODE is enabled these values are the defaults.
@@ -1036,7 +1072,11 @@
   //#define BACKLASH_SMOOTHING_MM 3 // (mm)
 
   // Add runtime configuration and tuning of backlash values (M425)
+<<<<<<< HEAD
   #define BACKLASH_GCODE                                                                           // Änderung
+=======
+  //#define BACKLASH_GCODE
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
   #if ENABLED(BACKLASH_GCODE)
     // Measure the Z backlash when probing (G29) and set with "M425 Z"
@@ -1109,7 +1149,11 @@
 
   // Define the pin to read during calibration
   #ifndef CALIBRATION_PIN
+<<<<<<< HEAD
     #define CALIBRATION_PIN -1            // Define here to override the default pin               // Änderung
+=======
+    //#define CALIBRATION_PIN -1            // Define here to override the default pin
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
     #define CALIBRATION_PIN_INVERTING false // Set to true to invert the custom pin
     //#define CALIBRATION_PIN_PULLDOWN
     #define CALIBRATION_PIN_PULLUP
@@ -1122,7 +1166,11 @@
  * vibration and surface artifacts. The algorithm adapts to provide the best possible step smoothing at the
  * lowest stepping frequencies.
  */
+<<<<<<< HEAD
 #define ADAPTIVE_STEP_SMOOTHING                                                                    // Änderung
+=======
+//#define ADAPTIVE_STEP_SMOOTHING
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
 /**
  * Custom Microstepping
@@ -1186,8 +1234,13 @@
    * AZTEEG_X5_MINI_WIFI         0x58              0x5C        MCP4451
    * MIGHTYBOARD_REVE      0x2F (0x5E)                         MCP4018
    */
+<<<<<<< HEAD
   #define DIGIPOT_I2C_ADDRESS_A 0x2C  // Unshifted slave address for first DIGIPOT                 // Änderung
   #define DIGIPOT_I2C_ADDRESS_B 0x2D  // Unshifted slave address for second DIGIPOT                // Änderung
+=======
+  //#define DIGIPOT_I2C_ADDRESS_A 0x2C  // Unshifted slave address for first DIGIPOT
+  //#define DIGIPOT_I2C_ADDRESS_B 0x2D  // Unshifted slave address for second DIGIPOT
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 #endif
 
 //===========================================================================
@@ -1657,7 +1710,7 @@
 // Additional options for DGUS / DWIN displays
 //
 #if HAS_DGUS_LCD
-  #define LCD_SERIAL_PORT 3
+  #define LCD_SERIAL_PORT 2
   #define LCD_BAUDRATE 115200
 
   #define DGUS_RX_BUFFER_SIZE 128
@@ -1907,10 +1960,17 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
+<<<<<<< HEAD
 #define LIN_ADVANCE                                                                                // Änderung
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K 0.35    // Unit: mm compression per 1mm/s extruder speed                   // Änderung
+=======
+//#define LIN_ADVANCE
+#if ENABLED(LIN_ADVANCE)
+  //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
+  #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -2056,9 +2116,15 @@
 #if ENABLED(ARC_SUPPORT)
   #define MIN_ARC_SEGMENT_MM      0.1 // (mm) Minimum length of each arc segment
   #define MAX_ARC_SEGMENT_MM      1.0 // (mm) Maximum length of each arc segment
+<<<<<<< HEAD
   #define MIN_CIRCLE_SEGMENTS      24 // Minimum number of segments in a complete circle           // Änderung
   //#define ARC_SEGMENTS_PER_SEC 50   // Use the feedrate to choose the segment length
   #define N_ARC_CORRECTION         25 // Number of interpolated segments between corrections       // Änderung
+=======
+  #define MIN_CIRCLE_SEGMENTS    72   // Minimum number of segments in a complete circle
+  //#define ARC_SEGMENTS_PER_SEC 50   // Use the feedrate to choose the segment length
+  #define N_ARC_CORRECTION       25   // Number of interpolated segments between corrections
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   //#define ARC_P_CIRCLES             // Enable the 'P' parameter to specify complete circles
   //#define SF_ARC_FIX                // Enable only if using SkeinForge with "Arc Point" fillet procedure
 #endif
@@ -2164,7 +2230,11 @@
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
+<<<<<<< HEAD
 #define BUFSIZE 10                                                                                 // Änderung
+=======
+#define BUFSIZE 4
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -2274,16 +2344,20 @@
  *
  * Note that M207 / M208 / M209 settings are saved to EEPROM.
  */
+<<<<<<< HEAD
 #define FWRETRACT                                                                                  // Änderung
+=======
+//#define FWRETRACT
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 #if ENABLED(FWRETRACT)
   #define FWRETRACT_AUTORETRACT             // Override slicer retractions
   #if ENABLED(FWRETRACT_AUTORETRACT)
     #define MIN_AUTORETRACT             0.1 // (mm) Don't convert E moves under this length
     #define MAX_AUTORETRACT            10.0 // (mm) Don't convert E moves over this length
   #endif
-  #define RETRACT_LENGTH                3   // (mm) Default retract length (positive value)
+  #define RETRACT_LENGTH                1   // (mm) Default retract length (positive value)
   #define RETRACT_LENGTH_SWAP          13   // (mm) Default swap retract length (positive value)
-  #define RETRACT_FEEDRATE             45   // (mm/s) Default feedrate for retracting
+  #define RETRACT_FEEDRATE             30   // (mm/s) Default feedrate for retracting
   #define RETRACT_ZRAISE                0   // (mm) Default retract Z-raise
   #define RETRACT_RECOVER_LENGTH        0   // (mm) Default additional recover length (added to retract length on recover)
   #define RETRACT_RECOVER_LENGTH_SWAP   0   // (mm) Default additional swap recover length (added to retract length on recover from toolchange)
@@ -2429,10 +2503,17 @@
   //#define FILAMENT_CHANGE_RESUME_ON_INSERT      // Automatically continue / load filament when runout sensor is triggered again.
   //#define PAUSE_REHEAT_FAST_RESUME              // Reduce number of waits by not prompting again post-timeout before continuing.
 
+<<<<<<< HEAD
   #define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change. // Änderung
   //#define HOME_BEFORE_FILAMENT_CHANGE           // If needed, home before parking for filament change
 
   #define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu. // Änderung
+=======
+  //#define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change.
+  //#define HOME_BEFORE_FILAMENT_CHANGE           // If needed, home before parking for filament change
+
+  //#define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
 #endif
 
@@ -2854,7 +2935,11 @@
    * Define your own with:
    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
    */
+<<<<<<< HEAD
   #define CHOPPER_TIMING CHOPPER_DEFAULT_24V        // All axes (override below)                   // Änderung
+=======
+  #define CHOPPER_TIMING CHOPPER_DEFAULT_12V        // All axes (override below)
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
   //#define CHOPPER_TIMING_X  CHOPPER_TIMING        // For X Axes (override below)
   //#define CHOPPER_TIMING_X2 CHOPPER_TIMING_X
   //#define CHOPPER_TIMING_Y  CHOPPER_TIMING        // For Y Axes (override below)
@@ -2883,7 +2968,11 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 - Report driver parameters (Requires TMC_DEBUG)
    */
+<<<<<<< HEAD
   #define MONITOR_DRIVER_STATUS                                                                    // Änderung
+=======
+  //#define MONITOR_DRIVER_STATUS
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
@@ -2945,6 +3034,7 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
+<<<<<<< HEAD
   #define SENSORLESS_HOMING // StallGuard capable drivers only                                     // Änderung
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
@@ -2952,6 +3042,15 @@
     #define X_STALL_SENSITIVITY  150                                                               // Änderung
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
     #define Y_STALL_SENSITIVITY  110                                                               // Änderung
+=======
+  //#define SENSORLESS_HOMING // StallGuard capable drivers only
+
+  #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
+    // TMC2209: 0...255. TMC2130: -64...63
+    #define X_STALL_SENSITIVITY  8
+    #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
+    #define Y_STALL_SENSITIVITY  8
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
     #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
     //#define Z_STALL_SENSITIVITY  8
     //#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
@@ -2986,7 +3085,11 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continuous reporting.
    */
+<<<<<<< HEAD
   #define TMC_DEBUG                                                                                // Änderung
+=======
+  //#define TMC_DEBUG
+>>>>>>> parent of 4c8646b (Konfiguration für Ender-5 Plus)
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
@@ -4182,7 +4285,7 @@
 //
 // M42 - Set pin states
 //
-//#define DIRECT_PIN_CONTROL
+#define DIRECT_PIN_CONTROL
 
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
