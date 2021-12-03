@@ -2,7 +2,7 @@
 
 Beschrieben wird der Download, die Installation und die darauffolgende Konfiguration des PrusaSlicer's. [03.12.2012]
 
-Zum Zeitpunkt dieser Dokumentation liegt der PrusaSlicer in der Version **[2.3.3]** und die Konfiguration in der Version **[2021-12-02 PrusaSlicer_config_bundle.ini]** vor.
+Zum Zeitpunkt dieser Dokumentation liegt der PrusaSlicer in der Version `2.3.3` und die Konfiguration in der Version `2021-12-02 PrusaSlicer_config_bundle.ini` vor.
 
 ## Download
 Der PrusaSlicer kann als Standalone (ohne Treiber/Firmware der PrusaPrinter) über die offizielle [Webseite](https://www.prusa3d.com/page/prusaslicer_424/) herunter geladen werden.
@@ -19,7 +19,7 @@ Nach dem ersten Start des PrusaSlicer's kann der Wizard abgebrochen werden. Die 
 
 > Import
 > 
-> * Datei > Import > Importiere Konfigurationssammlung...
+> * `Datei > Import > Importiere Konfigurationssammlung...`
 
 > Export
 >
