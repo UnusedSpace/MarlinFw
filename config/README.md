@@ -4,8 +4,8 @@ Beschrieben wird der Download, die Installation und die darauffolgende Konfigura
 
 Zum Zeitpunkt dieser Dokumentation liegen die Daten in folgender Version vor:
 
-| :Datei | Version |
-| --- | ---: |
+| Datei | Version |
+| :--- | ---: |
 | PrusaSlicer | 2.3.3 |
 | Konfiguration | 2021-12-02 |
 
@@ -17,7 +17,10 @@ Die Konfiguration befindet sich in [diesem](./) Ordner.
 Die Installation verläuft wie gewohnt. <br>
 Trotz der *Standalone*-Definition können die vordefinierten Haken im Reiter ***Features*** unter ***Drivers*** und ***Utilities*** entfernt werden.
 
+<center>
+
 ![Information: Prusa_Installation-Features](sources/prusa_installation-features.jpg "Nicht benötigte Features")
+</center>
 
 ### Konfiguration
 Nach dem ersten Start des PrusaSlicer's kann der Wizard abgebrochen werden. Die Konfiguration beinhaltet alle benötigten Daten.
