@@ -641,9 +641,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 132.86
+  #define DEFAULT_bedKi 12.09
+  #define DEFAULT_bedKd 973.49
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1368,8 +1368,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 360                                                                             // Änderung
-#define Y_BED_SIZE 360                                                                             // Änderung
+#define X_BED_SIZE 300                                                                             // Änderung
+#define Y_BED_SIZE 300                                                                             // Änderung
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
