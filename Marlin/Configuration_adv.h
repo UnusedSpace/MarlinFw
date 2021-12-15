@@ -1109,7 +1109,7 @@
 
   // Define the pin to read during calibration
   #ifndef CALIBRATION_PIN
-    #define CALIBRATION_PIN -1            // Define here to override the default pin               // Änderung
+    //#define CALIBRATION_PIN -1            // Define here to override the default pin
     #define CALIBRATION_PIN_INVERTING false // Set to true to invert the custom pin
     //#define CALIBRATION_PIN_PULLDOWN
     #define CALIBRATION_PIN_PULLUP
@@ -1186,8 +1186,8 @@
    * AZTEEG_X5_MINI_WIFI         0x58              0x5C        MCP4451
    * MIGHTYBOARD_REVE      0x2F (0x5E)                         MCP4018
    */
-  #define DIGIPOT_I2C_ADDRESS_A 0x2C  // Unshifted slave address for first DIGIPOT                 // Änderung
-  #define DIGIPOT_I2C_ADDRESS_B 0x2D  // Unshifted slave address for second DIGIPOT                // Änderung
+  //#define DIGIPOT_I2C_ADDRESS_A 0x2C  // Unshifted slave address for first DIGIPOT
+  //#define DIGIPOT_I2C_ADDRESS_B 0x2D  // Unshifted slave address for second DIGIPOT
 #endif
 
 //===========================================================================
@@ -2164,7 +2164,7 @@
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 10                                                                                 // Änderung
+#define BUFSIZE 4
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -2274,7 +2274,7 @@
  *
  * Note that M207 / M208 / M209 settings are saved to EEPROM.
  */
-#define FWRETRACT                                                                                  // Änderung
+//#define FWRETRACT
 #if ENABLED(FWRETRACT)
   #define FWRETRACT_AUTORETRACT             // Override slicer retractions
   #if ENABLED(FWRETRACT_AUTORETRACT)
@@ -2429,10 +2429,10 @@
   //#define FILAMENT_CHANGE_RESUME_ON_INSERT      // Automatically continue / load filament when runout sensor is triggered again.
   //#define PAUSE_REHEAT_FAST_RESUME              // Reduce number of waits by not prompting again post-timeout before continuing.
 
-  #define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change. // Änderung
+  //#define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change.
   //#define HOME_BEFORE_FILAMENT_CHANGE           // If needed, home before parking for filament change
 
-  #define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu. // Änderung
+  //#define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
   //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
 #endif
 
@@ -2945,13 +2945,13 @@
    *
    * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
    */
-  #define SENSORLESS_HOMING // StallGuard capable drivers only                                     // Änderung
+  //#define SENSORLESS_HOMING // StallGuard capable drivers only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  150                                                               // Änderung
+    #define X_STALL_SENSITIVITY  8
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  110                                                               // Änderung
+    #define Y_STALL_SENSITIVITY  8
     #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
     //#define Z_STALL_SENSITIVITY  8
     //#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
@@ -4182,7 +4182,7 @@
 //
 // M42 - Set pin states
 //
-//#define DIRECT_PIN_CONTROL
+#define DIRECT_PIN_CONTROL                                                                         // Änderung
 
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
