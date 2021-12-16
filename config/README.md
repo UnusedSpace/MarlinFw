@@ -1,3 +1,5 @@
-# Where have all the configurations gone?
+# PrusaSlicer
+## Installation | Konfiguration
+Verschoben nach:
 
-## https://github.com/MarlinFirmware/Configurations/archive/release-2.0.9.2.zip
+[root]\programs\prusa-slicer
