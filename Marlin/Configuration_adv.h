@@ -1910,7 +1910,7 @@
 #define LIN_ADVANCE                                                                                // Änderung
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.35    // Unit: mm compression per 1mm/s extruder speed                   // Änderung
+  #define LIN_ADVANCE_K 0.0     // Unit: mm compression per 1mm/s extruder speed                   // Änderung
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
