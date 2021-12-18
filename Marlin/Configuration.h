@@ -596,13 +596,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  40.38,  40.38 }                                                     // Änderung
-    #define DEFAULT_Ki_LIST {   6.32,   6.32 }                                                     // Änderung
-    #define DEFAULT_Kd_LIST {  64.50,  64.50 }                                                     // Änderung
+    #define DEFAULT_Kp_LIST {  25.66,  25.66 }                                                     // Änderung
+    #define DEFAULT_Ki_LIST {   4.67,   4.67 }                                                     // Änderung
+    #define DEFAULT_Kd_LIST {  35.21,  35.21 }                                                     // Änderung
   #else
-    #define DEFAULT_Kp  40.38                                                                      // Änderung
-    #define DEFAULT_Ki   6.32                                                                      // Änderung
-    #define DEFAULT_Kd  64.50                                                                      // Änderung
+    #define DEFAULT_Kp  25.66                                                                      // Änderung
+    #define DEFAULT_Ki   4.67                                                                      // Änderung
+    #define DEFAULT_Kd  35.21                                                                      // Änderung
   #endif
 #endif // PIDTEMP
 
@@ -860,9 +860,9 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE  TMC2208                                                                     // Änderung
-#define Y_DRIVER_TYPE  TMC2208                                                                     // Änderung
-#define Z_DRIVER_TYPE  TMC2208                                                                     // Änderung
+#define X_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
+#define Y_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
+#define Z_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
@@ -871,7 +871,7 @@
 //#define I_DRIVER_TYPE  A4988
 //#define J_DRIVER_TYPE  A4988
 //#define K_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE TMC2208                                                                     // Änderung
+#define E0_DRIVER_TYPE TMC2208_STANDALONE                                                          // Änderung
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -926,7 +926,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 137.97 }                                      // Änderung
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 137.97 }                                      // Änderung
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1178,7 +1178,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -50.0, -10.0, -1.74 }                                                  // Änderung | Z-Offset in GCode eintragen !!!
+#define NOZZLE_TO_PROBE_OFFSET { -50.0, -10.0, -3.95 }                                                  // Änderung | Z-Offset in GCode eintragen !!!
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
