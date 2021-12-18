@@ -596,13 +596,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  25.66,  25.66 }                                                     // Änderung
-    #define DEFAULT_Ki_LIST {   4.67,   4.67 }                                                     // Änderung
-    #define DEFAULT_Kd_LIST {  35.21,  35.21 }                                                     // Änderung
+    #define DEFAULT_Kp_LIST {  30.50,  30.50 }                                                     // Änderung
+    #define DEFAULT_Ki_LIST {   3.92,   3.92 }                                                     // Änderung
+    #define DEFAULT_Kd_LIST {  59.34,  59.34 }                                                     // Änderung
   #else
-    #define DEFAULT_Kp  25.66                                                                      // Änderung
-    #define DEFAULT_Ki   4.67                                                                      // Änderung
-    #define DEFAULT_Kd  35.21                                                                      // Änderung
+    #define DEFAULT_Kp  30.50                                                                      // Änderung
+    #define DEFAULT_Ki   3.92                                                                      // Änderung
+    #define DEFAULT_Kd  59.34                                                                      // Änderung
   #endif
 #endif // PIDTEMP
 
@@ -1369,7 +1369,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 235                                                                             // Änderung
-#define Y_BED_SIZE 224                                                                             // Änderung
+#define Y_BED_SIZE 235                                                                             // Änderung
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1552,8 +1552,8 @@
  */
 #define PREHEAT_BEFORE_LEVELING                                                                    // Änderung
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  #define LEVELING_NOZZLE_TEMP 205   // (°C) Only applies to E0 at this time                       // Änderung
-  #define LEVELING_BED_TEMP     60                                                                 // Änderung
+  #define LEVELING_NOZZLE_TEMP  50   // (°C) Only applies to E0 at this time                       // Änderung
+  #define LEVELING_BED_TEMP     65                                                                 // Änderung
 #endif
 
 /**
