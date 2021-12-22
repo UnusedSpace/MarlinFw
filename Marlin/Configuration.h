@@ -1369,7 +1369,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 235                                                                             // Änderung
-#define Y_BED_SIZE 235                                                                             // Änderung
+#define Y_BED_SIZE 230                                                                             // Änderung
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
