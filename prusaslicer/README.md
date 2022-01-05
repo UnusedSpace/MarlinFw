@@ -24,7 +24,9 @@ Trotz der *Standalone*-Definition können die vordefinierten Haken im Reiter ***
 ![Information: Prusa Installation-Features](sources/prusa_installation-features_v2.3.3.jpg "Nicht notwendige Features")
 </center>
 
-### **Konfiguration**
+<details>
+    <summary><b><i> Konfiguration </i></b></summary>
+
 Nach dem ersten Start von PrusaSlicer kann der Wizard abgebrochen und eine Konfiguration geladen werden:
 
 > <c> *Import* </c>
@@ -33,9 +35,10 @@ Nach dem ersten Start von PrusaSlicer kann der Wizard abgebrochen und eine Konfi
 > <c> *Export* </c>
 > * `Datei > Export > Konfigurationssammlung exportieren...`
 
-<br>
+</details>
 
-### **Druckbettkontur** - Optional
+<details>
+    <summary><b><i> Druckbettkontur - Optional </i></b></summary>
 
 Optional kann eine Druckbettkontur `*.stl` konfiguriert werden, welche im Ordner der Konfigurationssammlungen bereit liegt. Um eine fehlerfreie Funktion von PrusaSlicer sicher zu stellen, sollten die Darstellungsdateien unter dem PrusaSlicer eigenen Konfigurationspfad `%AppData%\PrusaSlicer` abgelegt werden.
 
@@ -57,7 +60,7 @@ Optional kann eine Druckbettkontur `*.stl` konfiguriert werden, welche im Ordner
 > 
 <br>
 
-In PrusaSlicer kann die Druckbettkontur für den jeweiligen Drucker wie folgt zugewiesen werden:
+**Die Druckbettkontur für den jeweiligen Drucker zuweisen:**
 1. Reiter `Druckereinstellungen`
 2. Drucker auswählen, beispielsweise `Creality Ender-5 - Druckereinstellungen`
 3. Einstellungssammlung `Allgemein`
@@ -65,6 +68,7 @@ In PrusaSlicer kann die Druckbettkontur für den jeweiligen Drucker wie folgt zu
 5. Im Feld `Größe und Koordinaten` bei `Druckbettkontur:` auf `Setzen ...`
 6. Im Feld `Modell` auf `Laden...` und die passende Druckbettkontur laden
 7. Jeweils mit `Öffnen` und `OK` bestätigen
+<br><br>
 
 <center>
 
@@ -77,3 +81,5 @@ In PrusaSlicer kann die Druckbettkontur für den jeweiligen Drucker wie folgt zu
 ![](sources/prusa_configuration_printbed-model_preview.jpg "Druckbettkontur Beispielansicht")
 
 </center>
+
+</details>
