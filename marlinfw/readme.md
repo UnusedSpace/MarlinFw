@@ -1138,22 +1138,6 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Optional </i>- BLTOUCH_SET_5V_MODE </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            >   //#define BLTOUCH_SET_5V_MODE
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            >   #define BLTOUCH_SET_5V_MODE
-            
-            </details>
-
-        *   <details>
-            
             <summary> <i> Optional </i>- Z_STEPPER_ALIGN_XY </summary>
 
             `Description in progress...`
