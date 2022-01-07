@@ -1,4 +1,4 @@
-# Marlin Firmware | Download | Konfiguration | Flash
+# Marlin Firmware
 
 
 ## **Hardware**
@@ -76,7 +76,7 @@ Die Grundinstallation erfolgt nach dem Download wie gewohnt. Ein GitHub-Account 
 
 <br>
 
-## Marlin Firmware - Download | Konfiguration
+## Marlin Firmware - Download | Konfiguration | Flash
 <details>
     <summary><b><i> Download - Original oder Fork </i></b></summary>
 
@@ -980,7 +980,7 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Erforderlich </i>- GRID_MAX_POINTS_X </summary>
+            <summary> <i> Optional </i>- GRID_MAX_POINTS_X </summary>
 
             `Description in progress...`
 
