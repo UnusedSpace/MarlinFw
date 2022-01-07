@@ -596,9 +596,9 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  30.50,  30.50 }                                                     // Änderung
-    #define DEFAULT_Ki_LIST {   3.92,   3.92 }                                                     // Änderung
-    #define DEFAULT_Kd_LIST {  59.34,  59.34 }                                                     // Änderung
+    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
+    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
+    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     #define DEFAULT_Kp  30.50                                                                      // Änderung
     #define DEFAULT_Ki   3.92                                                                      // Änderung
@@ -861,9 +861,9 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
-#define Y_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
-#define Z_DRIVER_TYPE  TMC2208_STANDALONE                                                          // Änderung
+#define X_DRIVER_TYPE  TMC2208                                                                     // Änderung
+#define Y_DRIVER_TYPE  TMC2208                                                                     // Änderung
+#define Z_DRIVER_TYPE  TMC2208                                                                     // Änderung
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
 //#define Z2_DRIVER_TYPE A4988
@@ -872,7 +872,7 @@
 //#define I_DRIVER_TYPE  A4988
 //#define J_DRIVER_TYPE  A4988
 //#define K_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE TMC2208_STANDALONE                                                          // Änderung
+#define E0_DRIVER_TYPE TMC2208                                                                     // Änderung
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -962,9 +962,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves      // Änderung
+#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts                        // Änderung
+#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves // Änderung
 
 /**
  * Default Jerk limits (mm/s)
@@ -1294,10 +1294,10 @@
 //#define DELAY_BEFORE_PROBING 200  // (ms) To prevent vibrations from triggering piezo sensors
 
 // Require minimum nozzle and/or bed temperature for probing
-//#define PREHEAT_BEFORE_PROBING
+#define PREHEAT_BEFORE_PROBING                                                                     // Änderung
 #if ENABLED(PREHEAT_BEFORE_PROBING)
-  #define PROBING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
-  #define PROBING_BED_TEMP     50
+  #define PROBING_NOZZLE_TEMP  65   // (°C) Only applies to E0 at this time                        // Änderung
+  #define PROBING_BED_TEMP     65                                                                  // Änderung
 #endif
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
@@ -1351,8 +1351,8 @@
 
 // @section homing
 
-#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.   // Änderung
-#define HOME_AFTER_DEACTIVATE   // Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety. // Änderung
+//#define NO_MOTION_BEFORE_HOMING // Inhibit movement until all axes have been homed. Also enable HOME_AFTER_DEACTIVATE for extra safety.
+//#define HOME_AFTER_DEACTIVATE   // Require rehoming after steppers are deactivated. Also enable NO_MOTION_BEFORE_HOMING for extra safety.
 
 /**
  * Set Z_IDLE_HEIGHT if the Z-Axis moves on its own when steppers are disabled.
@@ -1361,7 +1361,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-#define Z_HOMING_HEIGHT    4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...                 // Änderung
+//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
@@ -1562,7 +1562,7 @@
  */
 #define PREHEAT_BEFORE_LEVELING                                                                    // Änderung
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  #define LEVELING_NOZZLE_TEMP  50   // (°C) Only applies to E0 at this time                       // Änderung
+  #define LEVELING_NOZZLE_TEMP  65   // (°C) Only applies to E0 at this time                       // Änderung
   #define LEVELING_BED_TEMP     65                                                                 // Änderung
 #endif
 
