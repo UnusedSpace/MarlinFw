@@ -27,7 +27,7 @@ In diesem Repository werden folgende Drucker- und Motherboard-Kombinationen beha
 | - `Fork` UnusedSpace | 2.0.9.2 | [GitHub UnusedSpace](https://github.com/UnusedSpace/MarlinFw) |
 
 
-(**) Die Versionen beziehen sich auf den Zeitpunkt der Erstellung der Dokumentation.
+(**) Die Versionen beziehen sich auf den Zeitpunkt der Erstellung dieser Dokumentation.
 <br>Als Grundsystem für diese Dokumentation liegt Windows 10 vor.
 
 <br>
@@ -41,7 +41,7 @@ Die Grundinstallation erfolgt nach dem Download wie gewohnt. Nach dem ersten Sta
 
 Erforderliche Erweiterungen
 - `PlatformIO IDE` (Erforderlicher Compiler für MarlinFirmware)
-- `C/C++` (Programmiersprache der MarlinFirmware)
+- `C/C++` (Genutzte Programmiersprache der MarlinFirmware)
 - `C/C++` Extension Pack (Diverse nützliche Erweiterungen der Programmiersprache)
 
 </details>
@@ -55,7 +55,7 @@ Die Installation erfordert einige Voreinstellungen, welche sich nach den Gewohnh
 Optionale Voreinstellungen
 - Default Editor used by Git *->* Use Visual Studio Code as Git's default Editor
 - Name of the initial branch in new repositories *->* Let Git decide
-- PATH Environment *->* Git from the command line ans also from 3rd-party software
+- PATH Environment *->* Git from the command line and also from 3rd-party software
 - SSH executable *->* Use external OpenSSH
 - HTTPS transport backend *->* Use the native Windows Secure Channel library
 - Line ending conversions *->* Checkout Windows-style, commit Unix-style line endings
@@ -124,7 +124,7 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
             > MKS Gen 1.4 | SKR 1.4 Turbo
             > ```
-            > #define STRING_CONFIG_H_AUTHOR "(UnusedSpace | MarlinFw 2.0.9.2)" // Who made the changes.
+            > #define STRING_CONFIG_H_AUTHOR "(UnusedSpace | MarlinFw <VERSION>)" // Who made the changes.
 
             </details>
 
@@ -273,9 +273,9 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             >   #if ENABLED(PID_PARAMS_PER_HOTEND)
             >     // Specify up to one value per hotend here, according to your setup.
             >     // If there are fewer values, the last one applies to the remaining hotends.
-            >     #define DEFAULT_Kp_LIST {  30.50,  30.50 }
-            >     #define DEFAULT_Ki_LIST {   3.92,   3.92 }
-            >     #define DEFAULT_Kd_LIST {  59.34,  59,34 }
+            >     #define DEFAULT_Kp_LIST {  22.20,  22.20 }
+            >     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
+            >     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
             >   #else
             >     #define DEFAULT_Kp  30.50
             >     #define DEFAULT_Ki   3.92
@@ -294,9 +294,9 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             >   #if ENABLED(PID_PARAMS_PER_HOTEND)
             >     // Specify up to one value per hotend here, according to your setup.
             >     // If there are fewer values, the last one applies to the remaining hotends.
-            >     #define DEFAULT_Kp_LIST {  28.08,  28.08 }
-            >     #define DEFAULT_Ki_LIST {   2.79,   2.79 }
-            >     #define DEFAULT_Kd_LIST {  70.67,  70.67 }
+            >     #define DEFAULT_Kp_LIST {  22.20,  22.20 }
+            >     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
+            >     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
             >   #else
             >     #define DEFAULT_Kp  28.08
             >     #define DEFAULT_Ki   2.79
@@ -315,9 +315,9 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             >   #if ENABLED(PID_PARAMS_PER_HOTEND)
             >     // Specify up to one value per hotend here, according to your setup.
             >     // If there are fewer values, the last one applies to the remaining hotends.
-            >     #define DEFAULT_Kp_LIST {  30.56,  30.56 }
-            >     #define DEFAULT_Ki_LIST {   3.08,   3.08 }
-            >     #define DEFAULT_Kd_LIST {   75.82, 75.82 }
+            >     #define DEFAULT_Kp_LIST {  22.20,  22.20 }
+            >     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
+            >     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
             >   #else
             >     #define DEFAULT_Kp  30.56
             >     #define DEFAULT_Ki   3.08
@@ -336,9 +336,9 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             >   #if ENABLED(PID_PARAMS_PER_HOTEND)
             >     // Specify up to one value per hotend here, according to your setup.
             >     // If there are fewer values, the last one applies to the remaining hotends.
-            >     #define DEFAULT_Kp_LIST {  27.11,  27.11 }
-            >     #define DEFAULT_Ki_LIST {   2.62,   2.62 }
-            >     #define DEFAULT_Kd_LIST {  70.12,  70.12 }
+            >     #define DEFAULT_Kp_LIST {  22.20,  22.20 }
+            >     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
+            >     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
             >   #else
             >     #define DEFAULT_Kp  27.11
             >     #define DEFAULT_Ki   2.62
@@ -586,22 +586,6 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Erforderlich </i>- DEFAULT_MAX_FEEDRATE </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
-            
-            </details>
-
-        *   <details>
-            
             <summary> <i> Erforderlich </i>- DEFAULT_MAX_ACCELERATION </summary>
 
             `Description in progress...`
@@ -618,7 +602,7 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Erforderlich </i>- DEFAULT_MAX_ACCELERATION </summary>
+            <summary> <i> Erforderlich </i>- DEFAULT_ACCELERATION </summary>
 
             `Description in progress...`
 
@@ -706,17 +690,27 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Erforderlich </i>- Z_MIN_PROBE_REPEATABILITY_TEST </summary>
+            <summary> <i> Erforderlich </i>- PREHEAT_BEFORE_PROBING </summary>
 
             `Description in progress...`
 
             > Original
             > ```
-            > //#define Z_MIN_PROBE_REPEATABILITY_TEST
+            > // Require minimum nozzle and/or bed temperature for probing
+            > #define PREHEAT_BEFORE_PROBING
+            > #if ENABLED(PREHEAT_BEFORE_PROBING)
+            >   #define PROBING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
+            >   #define PROBING_BED_TEMP     50
+            > #endif
 
             > MKS Gen 1.4 | SKR 1.4 Turbo
             > ```
-            > #define Z_MIN_PROBE_REPEATABILITY_TEST
+            > // Require minimum nozzle and/or bed temperature for probing
+            > #define PREHEAT_BEFORE_PROBING
+            > #if ENABLED(PREHEAT_BEFORE_PROBING)
+            >   #define PROBING_NOZZLE_TEMP  65   // (°C) Only applies to E0 at this time
+            >   #define PROBING_BED_TEMP     65
+            > #endif
             
             </details>
 
@@ -978,7 +972,7 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             > */
             > //#define PREHEAT_BEFORE_LEVELING
             > #if ENABLED(PREHEAT_BEFORE_LEVELING)
-            >   #define LEVELING_NOZZLE_TEMP  50   // (°C) Only applies to E0 at this time
+            >   #define LEVELING_NOZZLE_TEMP  65   // (°C) Only applies to E0 at this time
             >   #define LEVELING_BED_TEMP     65
             > #endif
             
@@ -1042,54 +1036,6 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Optional </i>- SHOW_TEMP_ADC_VALUES </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define SHOW_TEMP_ADC_VALUES
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define SHOW_TEMP_ADC_VALUES
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 0
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 10
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- MILLISECONDS_PREHEAT_TIME </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define MILLISECONDS_PREHEAT_TIME 0
-
-            > SKR 1.4 Turbo
-            > ```
-            > #define MILLISECONDS_PREHEAT_TIME 30000
-            
-            </details>
-
-        *   <details>
-            
             <summary> <i> Erforderlich </i>- X_DUAL_STEPPER_DRIVERS </summary>
 
             `Description in progress...`
@@ -1138,38 +1084,6 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Optional </i>- Z_STEPPER_ALIGN_XY </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            >   //#define Z_STEPPER_ALIGN_XY { {  10, 190 }, { 100,  10 }, { 190, 190 } }
-
-            > SKR 1.4 Turbo
-            > ```
-            >   #define Z_STEPPER_ALIGN_XY { {  10, 180 }, { 300,  180 }, { 290, 290 } }
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- Z_STEPPER_ALIGN_ITERATIONS </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            >   #define Z_STEPPER_ALIGN_ITERATIONS 5    // Number of iterations to apply during alignment
-
-            > SKR 1.4 Turbo
-            > ```
-            >   #define Z_STEPPER_ALIGN_ITERATIONS 3    // Number of iterations to apply during alignment
-            
-            </details>
-
-        *   <details>
-            
             <summary> <i> Erforderlich </i>- DISABLE_INACTIVE_Z </summary>
 
             `Description in progress...`
@@ -1178,189 +1092,9 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
             > ```
             > #define DISABLE_INACTIVE_Z true  // Set 'false' if the nozzle could fall onto your printed part!
 
-            > SKR 1.4 Turbo
+            > SKR 1.4 Turbo | SKR 1.4 Turbo
             > ```
             > #define DISABLE_INACTIVE_Z false  // Set 'false' if the nozzle could fall onto your printed part!
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- XY_FREQUENCY </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define XY_FREQUENCY_LIMIT      10 // (Hz) Maximum frequency of small zigzag infill moves. Set with M201 F<hertz>.
-            > #ifdef XY_FREQUENCY_LIMIT
-            >   #define XY_FREQUENCY_MIN_PERCENT 5 // (percent) Minimum FR percentage to apply. Set with M201 G<min%>.
-            > #endif
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > //#define XY_FREQUENCY_LIMIT      10 // (Hz) Maximum frequency of small zigzag infill moves. Set with M201 F<hertz>.
-            > #ifdef XY_FREQUENCY_LIMIT
-            >   #define XY_FREQUENCY_MIN_PERCENT 15 // (percent) Minimum FR percentage to apply. Set with M201 G<min%>.
-            > #endif
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- BACKLASH_COMPENSATION </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define BACKLASH_COMPENSATION
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define BACKLASH_COMPENSATION
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- BACKLASH_GCODE </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            >   //#define BACKLASH_GCODE
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            >   #define BACKLASH_GCODE
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- ADAPTIVE_STEP_SMOOTHING </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define ADAPTIVE_STEP_SMOOTHING
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define ADAPTIVE_STEP_SMOOTHING
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- LIN_ADVANCE </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define LIN_ADVANCE
-            > #if ENABLED(LIN_ADVANCE)
-            >   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-            >   #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
-            >   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-            >   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
-            > #endif
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define LIN_ADVANCE
-            > #if ENABLED(LIN_ADVANCE)
-            >   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-            >   #define LIN_ADVANCE_K 0.0     // Unit: mm compression per 1mm/s extruder speed
-            >   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-            >   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
-            > #endif
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- ARC_SUPPORT </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > #define ARC_SUPPORT                   // Requires ~3226 bytes
-            >   #if ENABLED(ARC_SUPPORT)
-            >   #define MIN_ARC_SEGMENT_MM      0.1 // (mm) Minimum length of each arc segment
-            >   #define MAX_ARC_SEGMENT_MM      1.0 // (mm) Maximum length of each arc segment
-            >   #define MIN_CIRCLE_SEGMENTS    72   // Minimum number of segments in a complete circle
-            >   //#define ARC_SEGMENTS_PER_SEC 50   // Use the feedrate to choose the segment length
-            >   #define N_ARC_CORRECTION       25   // Number of interpolated segments between corrections
-            >   //#define ARC_P_CIRCLES             // Enable the 'P' parameter to specify complete circles
-            >   //#define SF_ARC_FIX                // Enable only if using SkeinForge with "Arc Point" fillet procedure
-            > #endif
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define ARC_SUPPORT                   // Requires ~3226 bytes
-            >   #if ENABLED(ARC_SUPPORT)
-            >   #define MIN_ARC_SEGMENT_MM      0.1 // (mm) Minimum length of each arc segment
-            >   #define MAX_ARC_SEGMENT_MM      1.0 // (mm) Maximum length of each arc segment
-            >   #define MIN_CIRCLE_SEGMENTS    24   // Minimum number of segments in a complete circle
-            >   //#define ARC_SEGMENTS_PER_SEC 50   // Use the feedrate to choose the segment length
-            >   #define N_ARC_CORRECTION       25   // Number of interpolated segments between corrections
-            >   //#define ARC_P_CIRCLES             // Enable the 'P' parameter to specify complete circles
-            >   //#define SF_ARC_FIX                // Enable only if using SkeinForge with "Arc Point" fillet procedure
-            > #endif
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Erforderlich </i>- CHOPPER_TIMING </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > #define CHOPPER_TIMING CHOPPER_DEFAULT_12V        // All axes (override below)
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define CHOPPER_TIMING CHOPPER_DEFAULT_24V        // All axes (override below)
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- MONITOR_DRIVER_STATUS </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define MONITOR_DRIVER_STATUS
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define MONITOR_DRIVER_STATUS
-            
-            </details>
-
-        *   <details>
-            
-            <summary> <i> Optional </i>- TMC_DEBUG </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > //#define TMC_DEBUG
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > #define TMC_DEBUG
             
             </details>
 
