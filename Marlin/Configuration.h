@@ -962,8 +962,8 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves      // Änderung
-#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts                        // Änderung
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves        // Änderung
+#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts                          // Änderung
 #define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves // Änderung
 
 /**
@@ -1361,7 +1361,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...   // Änderung
+#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ... // Änderung
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
