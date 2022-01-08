@@ -690,32 +690,6 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 
         *   <details>
             
-            <summary> <i> Erforderlich </i>- PREHEAT_BEFORE_PROBING </summary>
-
-            `Description in progress...`
-
-            > Original
-            > ```
-            > // Require minimum nozzle and/or bed temperature for probing
-            > #define PREHEAT_BEFORE_PROBING
-            > #if ENABLED(PREHEAT_BEFORE_PROBING)
-            >   #define PROBING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
-            >   #define PROBING_BED_TEMP     50
-            > #endif
-
-            > MKS Gen 1.4 | SKR 1.4 Turbo
-            > ```
-            > // Require minimum nozzle and/or bed temperature for probing
-            > #define PREHEAT_BEFORE_PROBING
-            > #if ENABLED(PREHEAT_BEFORE_PROBING)
-            >   #define PROBING_NOZZLE_TEMP  65   // (°C) Only applies to E0 at this time
-            >   #define PROBING_BED_TEMP     65
-            > #endif
-            
-            </details>
-
-        *   <details>
-            
             <summary> <i> Erforderlich </i>- Stepper direction </summary>
 
             `Description in progress...`
