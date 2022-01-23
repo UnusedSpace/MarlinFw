@@ -13,3 +13,13 @@
 
 - Installation
 - Konfiguration
+
+### [Raspberry](./raspberry/readme.md)
+
+- OctoPrint | Raspbian
+  - Installation
+  - Konfiguration
+
+- OctoPi
+  - Installation
+  - Konfiguration

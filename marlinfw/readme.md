@@ -91,6 +91,23 @@ Nachdem das entsprechende Repository heruntergeladen wurde, kann es mit `Open in
 <details>
     <summary><b><i> Konfiguration </i></b></summary>
 
+Konfigurationsanleitungen
+
+  *   <details>
+        
+       <summary><b> BLTouch Offsets </b></summary>
+
+        Text
+
+        ![root/platformio.ini - screenshot chipset](sources/bltouch_offset.jpg "Dateipfad: root/platformio.ini")
+
+        Text
+
+       </details>
+
+Dateikonfigurationen
+
+
    *   <details>
         
        <summary><b> root/platformio.ini </b></summary>
