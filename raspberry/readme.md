@@ -29,7 +29,7 @@ Raspberry Pi Zero, Raspberry Pi Zero W werden aufgrund der erhöhten Hardwareanf
 ## Software - Installation | Konfiguration
 
 <details>
-    <summary><b><i> Raspberry Pi Imager </i></b></summary>
+<summary><b><i> Raspberry Pi Imager </i></b></summary>
 
 Empfohlen wird eine Class10 SD-Karte mit mindestens 8GB Flashspeicher. Diese kann nun eingelegt und im Hauptmenü unter *SD-KARTE WÄHLEN" ausgewählt werden.
 
@@ -371,4 +371,101 @@ Text
 
 Text
 
-</details>
+*   <details>
+    <summary><b><i> Mehrere Drucker an einem Raspberry </i></b></summary>
+
+    Video
+    https://www.youtube.com/watch?v=GEgukBiLnmM
+
+    > 2. Instanz > Ordner erstellen
+    > ```
+    > cp -R /home/pi/.octoprint /home/pi/.octoprint2
+    
+    > 3. Instanz > Ordner erstellen
+    > ```
+    > cp -R /home/pi/.octoprint /home/pi/.octoprint3
+
+    > Als SuperUser anmelden
+    > ```
+    > sudo su root
+
+    > In den Dienste-Ordner wechseln
+    > ```
+    > cd /etc/systemd/system/
+
+    > 2. Instanz > Dienst erstellen
+    > ```
+    > cp ./octoprint.service ./octoprint2.service
+
+    > 3. Instanz > Dienst erstellen
+    > ```
+    > cp ./octoprint.service ./octoprint3.service
+
+    > 2. Instanz > Erforderliche Daten kopieren
+    > ```
+    > sudo sed s/127.0.0.1/0.0.0.0/ < octoprint.service | sed s/5000/5001/ | sed s/--port=\${PORT}/--port=\${PORT}\ --basedir=\\/home\\/pi\\/\.octoprint2/ > octoprint2.service
+
+    > 3. Instanz > Erforderliche Daten kopieren
+    > ```
+    > sudo sed s/127.0.0.1/0.0.0.0/ < octoprint.service | sed s/5000/5002/ | sed s/--port=\${PORT}/--port=\${PORT}\ --basedir=\\/home\\/pi\\/\.octoprint3/ > octoprint3.service
+
+    > 2. Instanz > Im Autostart aufnehmen
+    > ```
+    > systemctl enable octoprint2
+
+    > 3. Instanz > Im Autostart aufnehmen
+    > ```
+    > systemctl enable octoprint3
+
+    > 2. Instanz > Instanz starten
+    > ```
+    > systemctl start octoprint2
+
+    > 3. Instanz > Instanz starten
+    > ```
+    > systemctl start octoprint3
+
+    WICHTIG:
+    Systemkommando [Neustart OctoPrint] anpassen
+    OctoPrint > Einstellungen > OctoPrint > Server > Commandos >> octoprint zu octoprint2 etc.
+
+    > Ersten Drucker mit einem freien USB-Port verbinden und über folgenden Befehl ausfindig machen
+    > ```
+    > tail -F /var/log/messages
+
+    usb 1-1.1 oder usb 1-1.2 oder usb 1-1.3 oder usb 1-1.4
+    Wichtige Daten aus dem String:
+    idVendor=****
+    idProduct=****
+    SerialNumber=*********************
+    devpath=*.*
+    SYMLINK=[Druckername]
+
+    > 99-usb.rules öffnen
+    > ```
+    > sudo nano /etc/udev/rules.d/99-usb.rules Default
+    
+    > 99-usb.rules Datei mit den USB-Linkungen füllen
+    > ```
+    > SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="1.3", SYMLINK+="Ender3-1"
+    
+    > OctoPrint > Einstellungen > Drucker > Serielle Verbindungen > Weitere Serielle Ports eintragen
+    > ```
+    > /dev/[Druckername]
+
+    > Raspberry neustarten
+    > ```
+    > sudo reboot now
+
+    > OctoPrint > Verbindungen > Serieller Port auswählen
+    > ```
+    > /dev/[Druckername]
+
+    </details>
+
+
+
+
+cd /var/log
+sudo cat messages
+ls -l /dev
