@@ -462,10 +462,3 @@ Text
     > /dev/[Druckername]
 
     </details>
-
-
-
-
-cd /var/log
-sudo cat messages
-ls -l /dev
