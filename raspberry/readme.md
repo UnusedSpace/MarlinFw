@@ -433,6 +433,10 @@ Text
     > ```
     > tail -F /var/log/messages
 
+    > Falls der Befehl zu langsam, folgenden Befehl ausführen und "ausgabe.txt" per Nano durchsuchen
+    > ```
+    > sudo cat /var/log/messages > ausgabe.txt
+
     usb 1-1.1 oder usb 1-1.2 oder usb 1-1.3 oder usb 1-1.4
     Wichtige Daten aus dem String:
     idVendor=****
@@ -447,7 +451,9 @@ Text
     
     > 99-usb.rules Datei mit den USB-Linkungen füllen
     > ```
-    > SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="1.3", SYMLINK+="Ender3-1"
+    > SUBSYSTEM=="tty", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="6029", ATTRS{serial}=="18004010AF6998C15E42D714F50020C0", SYMLINK+="Alpha"
+    > SUBSYSTEM=="tty", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="6029", ATTRS{serial}=="0700B005AF6998C15E4279EFF50020C5", SYMLINK+="Bravo"
+    > SUBSYSTEM=="tty", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="6029", ATTRS{serial}=="1100900AAF6998C05E40D671F50020C0", SYMLINK+="Charlie"
     
     > OctoPrint > Einstellungen > Drucker > Serielle Verbindungen > Weitere Serielle Ports eintragen
     > ```
